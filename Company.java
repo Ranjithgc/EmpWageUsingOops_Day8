@@ -55,7 +55,9 @@ public class Company {
 	
 	@Override
 	public String toString() {
-		return "Total Emp Wage for Company: " + company + " is: " + totalEmpWage;
+		return "Company [company= " + company + ", empRatePerHour= " + empRatePerHour + 
+					   ", numberOfWorkingDays= " + numberOfWorkingDays + ", maxHourPerMonth= " + maxHourPerMonth +
+					   ", totalEmpWage= " + totalEmpWage + "]";
 	}
 }	
 
