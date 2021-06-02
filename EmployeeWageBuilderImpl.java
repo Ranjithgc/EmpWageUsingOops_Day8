@@ -36,11 +36,20 @@ public class EmployeeWageBuilderImpl implements IEmpWageBuilder {
 	public void addCompany(Company company) {
 		companyList.add(company);
 	}
+	
+	public void retrieveTotalWages() {
+		for(Company company : companyList) {
+			System.out.println("Company [company= " + company.getCompany() + ", empRatePerHour= " + company.getEmpRatePerHour() + 
+					   ", numberOfWorkingDays= " + company.getNumberOfWorkingDays() + ", maxHourPerMonth= " + company.getMaxHourPerMonth() +
+					   ", totalEmpWage= " + company.getTotalEmpWage() + "]");
+		}
+	} 
 	public static void main(String[] args) {
 		Company c1 = new Company("DMart", 20, 30, 150);
 		Company c2 = new Company("Reliance", 10, 25, 100);	
 		EmployeeWageBuilderImpl builder = new EmployeeWageBuilder();
 		builder.addCompany(c1);
 		builder.addComapny(c2);
+		builder.retrieveTotalWages();
 	}
 }
